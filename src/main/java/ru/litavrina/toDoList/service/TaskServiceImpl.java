@@ -50,7 +50,6 @@ public class TaskServiceImpl implements iTaskService {
     /*удаление задачи*/
     @Override
     public void deleteTask(long id) {
-        Task existedTask = getTaskById(id);
-        repository.delete(existedTask);
+        repository.deleteById(id);
     }
 }
